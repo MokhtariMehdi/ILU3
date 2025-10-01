@@ -1,0 +1,9 @@
+package cartes;
+
+public class JeuDeCartes {
+	
+	public JeuDeCartes() {
+		new Configuration()
+	}
+	public affichageJeuDeCartes
+}

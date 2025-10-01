@@ -1,0 +1,5 @@
+package cartes;
+
+public final class FinLimite extends Limite {
+    // Pas d'attributs spécifiques pour Q1
+}

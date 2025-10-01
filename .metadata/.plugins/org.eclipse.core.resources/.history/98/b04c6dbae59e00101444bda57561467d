@@ -1,0 +1,19 @@
+package cartes;
+
+public class Botte extends Carte {
+    private final Type type;
+
+    public Botte(Type type) {
+        if (type == Type.LIMITE) {
+            throw new IllegalArgumentException("Pas de botte pour LIMITE");
+        }
+        this.type = type;
+    }
+
+    public Type getType() { return type; }
+
+    @Override
+    public String toString() {
+        return type.libelleBotte();
+    }
+}

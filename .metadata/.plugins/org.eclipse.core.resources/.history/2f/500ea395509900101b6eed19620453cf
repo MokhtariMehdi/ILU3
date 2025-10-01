@@ -1,0 +1,9 @@
+ackage cartes;
+
+public class Limite extends Carte {
+
+	public Limite() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

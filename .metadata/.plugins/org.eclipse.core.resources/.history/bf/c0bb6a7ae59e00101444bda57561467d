@@ -1,0 +1,23 @@
+package cartes;
+
+public abstract class Probleme extends Carte {
+	private Type type;
+	private Type Probleme;
+	
+	public void setType(Type new_type) {
+		type = new_type;
+	}
+	
+	public Type getType() {
+		return type;
+	}
+
+	public Type getProbleme() {
+		return Probleme;
+	}
+
+	public void setProbleme(Type probleme) {
+		Probleme = probleme;
+	}
+	
+}

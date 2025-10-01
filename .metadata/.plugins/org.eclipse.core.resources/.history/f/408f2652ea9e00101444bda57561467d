@@ -1,0 +1,9 @@
+package cartes;
+
+public class Configuration extends Carte {
+	private int nbExemplaires;
+
+	public int getNbExemplaires() {
+		return nbExemplaires;
+	}
+}

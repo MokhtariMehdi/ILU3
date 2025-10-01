@@ -1,0 +1,16 @@
+package cartes;
+
+public final class Configuration {
+    private final Carte carte;
+    private final int nbExemplaires;
+
+    public Configuration(Carte carte, int nbExemplaires) {
+        if (carte == null) throw new IllegalArgumentException("carte null");
+        if (nbExemplaires < 0) throw new IllegalArgumentException("nb < 0");
+        this.carte = carte;
+        this.nbExemplaires = nbExemplaires;
+    }
+
+    public Carte getCarte() { return carte; }
+    public int getNbExemplaires() { return nbExemplaires; }
+}

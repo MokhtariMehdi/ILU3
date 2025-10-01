@@ -1,0 +1,9 @@
+package cartes;
+
+public class JeuDeCartes extends Configuration {
+	
+	public JeuDeCartes() {
+		new Configuration()
+	}
+	public affichageJeuDeCartes
+}
