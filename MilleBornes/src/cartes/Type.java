@@ -4,7 +4,7 @@ public enum Type {
     FEU("Feu rouge", "Feu vert", "Prioritaire"),
     ESSENCE("Panne d'essence", "Bidon d'essence", "Citerne"),
     CREVAISON("Crevaison", "Roue de secours", "Increvable"),
-    ACCIDENT("Accident", "Réparation", "As du volant");
+    ACCIDENT("Accident", "RÃ©paration", "As du volant");
 
     private final String attaque;
     private final String parade;

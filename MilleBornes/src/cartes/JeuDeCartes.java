@@ -45,5 +45,34 @@ public final class JeuDeCartes {
     }
 
     public Configuration[] getTypesDeCartes() { return typesDeCartes; }
+
+    public Carte[] donnerCartes() {
+        int total = 0;
+        for (Configuration c : typesDeCartes        )
+            total += c.getNbExemplaires();
+
+        Carte[] toutes = new Carte[total];
+        int i = 0;
+
+        for (Configuration c : typesDeCartes) {
+            for (int k = 0; k < c.getNbExemplaires(); k++) {
+                Carte carte = c.getCarte();
+                if (carte instanceof Borne) {
+                    toutes[i++] = new Borne(((Borne) carte).getKm());
+                } else if (carte instanceof Attaque) {
+                    toutes[i++] = new Attaque(((Attaque) carte).getType());
+                } else if (carte instanceof Parade) {
+                    toutes[i++] = new Parade(((Parade) carte).getType());
+                } else if (carte instanceof Botte) {
+                    toutes[i++] = new Botte(((Botte) carte).getType());
+                } else if (carte instanceof DebutLimite) {
+                    toutes[i++] = new DebutLimite();
+                } else if (carte instanceof FinLimite) {
+                    toutes[i++] = new FinLimite();
+                }
+            }
+        }
+        return toutes;
+    }
 }
 
