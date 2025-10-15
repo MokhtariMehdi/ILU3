@@ -3,6 +3,6 @@ package cartes;
 public final class DebutLimite extends Limite {
     @Override
     public String toString() {
-        return "DÃ©but de Limite";
+        return "Début de Limite";
     }
 }

@@ -14,5 +14,8 @@ public final class Borne extends Carte {
     public String toString() {
         return km + "KM";
     }
-
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj) && this.km == ((Borne)obj).getKm();
+    }
 }

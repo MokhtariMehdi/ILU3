@@ -71,7 +71,7 @@ public final class Sabot implements Iterable<Carte> {
         @Override
         public void remove() {
             checkForComodification();
-            if (lastRet < 0) throw new IllegalStateException("next() non appelÃ© ou dÃ©jÃ  supprimÃ©");
+            if (lastRet < 0) throw new IllegalStateException("next() non appelé ou déjà supprimé");
 
             int numMoved = nbCartes - lastRet - 1;
             if (numMoved > 0) {
