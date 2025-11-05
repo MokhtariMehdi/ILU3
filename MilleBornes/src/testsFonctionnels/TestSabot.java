@@ -16,7 +16,7 @@ public final class TestSabot {
             System.out.println("je pioche " + c);
         }
 
-        System.out.println("\n== b) itÃ©rateur + remove ==");
+        System.out.println("\n== b) itérateur + remove ==");
         sabot = new Sabot(jeu.donnerCartes());
         Iterator<Carte> it = sabot.iterator();
         while (it.hasNext()) {

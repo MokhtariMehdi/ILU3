@@ -9,5 +9,9 @@ public final class Attaque extends Bataille {
         return getType().getAttaque();
     }
   
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
     
 }

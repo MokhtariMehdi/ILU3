@@ -3,19 +3,25 @@ package cartes;
 public final class Borne extends Carte {
     private final int km;
 
-    public Borne(int km) {
-        this.km = km;
+    public Borne(int km) { 
+    	this.km = km;
+    }
+    public int getKm() { 
+    	return km;
     }
 
-    public int getKm() {
-        return km;
-    }
     @Override
     public String toString() {
-        return km + "KM";
+    	return km + "KM";
     }
+    
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj) && this.km == ((Borne)obj).getKm();
+    }
+   
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(km) * 31 + getClass().hashCode();
     }
 }

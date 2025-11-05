@@ -8,5 +8,14 @@ public final class TestJeuDeCartes {
         System.out.print(jeu.affichageJeuDeCartes());
 
         Carte[] cartes = jeu.donnerCartes();
+        
+        System.out.println("\n	Vérification du jeu de cartes :");
+        boolean resultat = jeu.checkCount();
+
+        if (resultat) {
+            System.out.println("Le jeu de cartes contient le bon nombre d'exemplaires.");
+        } else {
+            System.out.println("Le jeu de cartes est incorrect.");
+        }
     }
 }

@@ -74,5 +74,25 @@ public final class JeuDeCartes {
         }
         return toutes;
     }
+    
+    public boolean checkCount() {
+        Carte[] toutes = donnerCartes();
+        for (int i = 0; i < typesDeCartes.length; i++) {
+            Configuration conf = typesDeCartes[i];
+            Carte modele = conf.getCarte();
+            int attendu = conf.getNbExemplaires();
+            int obtenu = 0;
+            for (int j = 0; j < toutes.length; j++) {
+                if (modele.equals(toutes[j])) {
+                    obtenu++;
+                }
+            }
+            if (attendu != obtenu) {
+                System.err.println("Erreur : " + modele + " attendu=" + attendu + " obtenu=" + obtenu);
+                return false;
+            }
+        }
+        return true;
+    }
 }
 

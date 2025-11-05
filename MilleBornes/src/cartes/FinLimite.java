@@ -5,4 +5,9 @@ public final class FinLimite extends Limite {
     public String toString() {
         return "Fin de Limite";
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }

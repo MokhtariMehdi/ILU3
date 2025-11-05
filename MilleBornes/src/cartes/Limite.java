@@ -1,5 +1,8 @@
 package cartes;
 
 public abstract class Limite extends Carte {
-    // Structure minimale pour Q1
+	@Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
