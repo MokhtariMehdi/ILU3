@@ -9,7 +9,7 @@ public final class TestJeuDeCartes {
 
         Carte[] cartes = jeu.donnerCartes();
         
-        System.out.println("\n	Vérification du jeu de cartes :");
+        System.out.println("\n	Vï¿½rification du jeu de cartes :");
         boolean resultat = jeu.checkCount();
 
         if (resultat) {

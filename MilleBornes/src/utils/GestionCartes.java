@@ -51,6 +51,47 @@ public class GestionCartes <T> {
 	    }
 	    return true;
 	}
-	
-	
+
+    public static <T> List<T> rassembler(List<T> liste) {
+        List<T> rassemblee = new ArrayList<>();
+        while (!liste.isEmpty()) {
+            T elem = extraire(liste);
+            int index = -1;
+            for (int i = 0; i < rassemblee.size(); i++) {
+                if (elem.equals(rassemblee.get(i))) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index != -1) {
+                rassemblee.add(index + 1, elem);
+            } else {
+                rassemblee.add(elem);
+            }
+        }
+        return rassemblee;
+    }
+
+    public static <T> boolean verifierRassemblement(List<T> liste) {
+        ListIterator<T> it1 = liste.listIterator();
+        while (it1.hasNext()) {
+            T courant = it1.next();
+            ListIterator<T> it2 = liste.listIterator(it1.nextIndex());
+            while (it2.hasNext()) {
+                T suivant = it2.next();
+                if (!suivant.equals(courant)) {
+                    while (it2.hasNext()) {
+                        T reste = it2.next();
+                        if (reste.equals(courant)) {
+                            return false;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        return true;
+    }
+
+
 }
