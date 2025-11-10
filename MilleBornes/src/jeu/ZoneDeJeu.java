@@ -42,4 +42,26 @@ public class ZoneDeJeu {
         }
         return total;
     }
+
+    public boolean peutAvancer() {
+        if (!(pileBataille.isEmpty())) {
+            if (pileBataille.getLast() instanceof Parade && ((Parade) pileBataille.getLast()).getType() == Type.FEU) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean estDepotFeuVertAutorise() {
+        if ((pileBataille.isEmpty())) {
+            return true;
+        }
+        Carte c = pileBataille.getLast();
+        if ((c instanceof Parade && ((Parade) c).getType() != Type.FEU)
+                || (c instanceof Attaque && ((Attaque) c).getType() == Type.FEU)) {
+            return true;
+        }
+        return false;
+    }
+
 }
